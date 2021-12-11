@@ -1,0 +1,196 @@
+:root{
+    --primary: #9C27B0;
+    --darkPrimary: #98119D;
+    --second: #FFCE00;
+    --darkSecond: rgb(233,287,2);
+    --white: #FFF;
+    --black: #000;
+
+    --principalFont: 'Staatliches', cursive;
+}
+html{
+    box-sizing: border-box;   
+    font-size: 62.5%;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+/*Globals*/
+body{
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    height: 67%;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: var(--white);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--second);
+    font-family: var(--principalFont);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+/*Header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/*Navigation*/
+.navigation{
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.navigation__link{
+    font-family: var(--principalFont);
+    color: var(--white);
+    font-size: 3rem;
+}
+.navigation__link:hover{
+    color: var(--second);
+}
+
+/*Product*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+@media(min-width:768px){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.product{
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+}
+.product__image{
+    width: 100%;
+    
+}
+.product__info{
+
+}
+.product__text{
+    font-size: 40px;
+}
+.product__price{
+    font-size: 28px;
+    color: var(--second);
+}
+.product__text,
+.product__price{
+    font-family: var(--principalFont);
+    margin: 10px 0;
+    text-align: center;
+}
+.graphic{
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+.graphic--shirts{
+    /*In this way you can add a specific white space in your main 
+    page*/
+    grid-row: 2/3;
+    background-image: url(/img/grafico1.jpg);
+   
+}
+.graphic--node{
+    background-image: url(/img/grafico2.jpg);
+    grid-row: 8/9;
+}
+@media(min-width:768px){
+    .graphic--node{
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }
+}
+
+
+/*Footer*/
+.footer{
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+.footer__text{
+    text-align: center;
+    font-family: var(--principalFont);
+}
+
+/*Pagina nosotros*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    
+}
+@media (min-width: 768px){
+    .nosotros{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1/2;
+    width: 100%;
+}
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2/3;
+    }
+}
+
+/*Iconos*/
+.comprar__titulo{
+    margin-top: 80px;
+}
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+@media (min-width:768px){
+    .bloques{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+.bloque__imagen{
+    width: 100%;
+}
